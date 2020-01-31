@@ -1,18 +1,29 @@
 body {
   font-family: monospace;
-  
+  background-image: url(../img/golden2.jpg);
+
 }
 .jumbotron h1 {
   text-align: center;
   font-size: 50pt;
   font-weight: bold;
-  color: black;
+  color: #27592D;
 }
 
 .jumbotron {
-  background-image: url(../img/goldfleck.jpg);
+  margin: 20px;
+  background-image: url(../img/tile.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
+}
+
+#options {
+  /* background-image: url(../img/tile.jpg); */
+  margin: 20px;
+}
+
+#receipt {
+  margin: 20px;
 }
