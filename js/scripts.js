@@ -4,19 +4,23 @@ function Pizza(size, meat, toppings) {
   this.toppings = toppings;
 }
 
-Pizza.prototype.pizzaBaseCost = function(size, meat) {
-  var sizeCost = 0;
-  if (this.size === small && this.meat == 1) {
-    sizeCost += 10;
-  } else if (this.size === small && this.meat == 2 || this.size === medium && this.meat == 1) {
-    sizeCost += 12;
-  } else if (this.size === medium && this.meat == 2 || this.size === large && this.meat == 1) {
-    sizeCost += 14;
-  } else {
-    sizeCost += 16;
+Pizza.prototype.pizzaCost = function() {
+  var pizzaCost = 0;
+  if (this.size === "small" && this.meat == 1) {
+    pizzaCost += 10;
+  } else if (this.size === "small" && this.meat == 2 || this.size === "medium" && this.meat == 1) {
+    pizzaCost += 12;
+  } else if (this.size === "medium" && this.meat == 2 || this.size === "large" && this.meat == 1) {
+    pizzaCost += 14;
+  } else if (this.size === "large" && this.meat == 2) {
+    pizzaCost += 16;
   }
-  return(sizeCost);
+  for (var i=0; i< this.toppings.length; i++) {
+    pizzaCost += 1;
+  }
+  return(pizzaCost);
 }
+
 
 Pizza.prototype.toppingsCost = function(toppings) {
 
@@ -33,6 +37,8 @@ $(document).ready(function() {
       var checkedTopping = $(this).val();
       $(customToppings).push(checkedTopping);
     });
+    customPizzaOrder.pizzaCost();
+    console.log(pizzaCost);
     console.log(customToppings);
     console.log(customSize);
     console.log(customMeat);
