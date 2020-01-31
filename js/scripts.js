@@ -4,11 +4,12 @@ function Pizza(size, meat, toppings) {
   this.toppings = [];
 }
 
-var sizeCost = 0;
-
-Pizza.prototype.pizzaSizeCost = function(size) {
-  if (this.size === small) {
+Pizza.prototype.pizzaBaseCost = function(size, meat) {
+  var sizeCost = 0;
+  if (this.size === small && this.meat === vegetarian) {
     sizeCost += 10;
+  } else if (this.size === small && this.meat === pepperoni || this.size === small && meat === sausuage) {
+    sizeCost += 12;
   } else if (this.size === medium) {
     sizeCost += 12;
   } else {
