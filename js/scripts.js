@@ -1,4 +1,4 @@
-function Pizza(size, meat,toppings) {
+function Pizza(size, meat, toppings) {
   this.size = size;
   this.meat = meat;
   this.toppings = toppings;
@@ -18,6 +18,11 @@ Pizza.prototype.pizzaPrice = function() {
   return pizzaCost;
 }
 
+Pizza.prototype.pizzaDetails = function(size, meat, toppings) {
+  $("#pizzaDetails").append("<li>" + this.size +"</li>");
+  $("#pizzaDetails").append("<li>" + this.meat +"</li>");
+}
+
 $(document).ready(function() {
   $("button").click(function(event) {
     event.preventDefault();
@@ -26,6 +31,7 @@ $(document).ready(function() {
     var customPizzaOrder = new Pizza(customSize, customMeat);
     var finalPizzaCost = customPizzaOrder.pizzaPrice();
 
+    customPizzaOrder.pizzaDetails();
     console.log(finalPizzaCost);
     console.log(customSize);
     console.log(customMeat);
