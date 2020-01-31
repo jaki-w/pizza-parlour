@@ -19,7 +19,18 @@ Pizza.prototype.pizzaBaseCost = function(this.size, this.meat) {
 }
 
 Pizza.prototype.toppingsCost = function(toppings) {
-  var totalToppings = 0;
-  for (var i = 0; i < toppings.length; i++)
-  return totalToppings + parseInt($(toppings[i]);
+
 }
+
+$(document).ready(function() {
+  $("button").submit(function(event) {
+    event.preventDefault();
+    var customPizzaOrder = new Pizza(size, meat, toppings);
+    var size = $("input:radio[name=pizzaSize]:checked").val();
+    var meat = $("input:radio[name=pizzaMeat]:checked").val();
+    $("input:checkbox[name=pizzaToppings]:checked").each(function() {
+      var checkedTopping = $(this).val();
+      $(Pizza.toppings).push();
+    });
+  });
+});
