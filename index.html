@@ -12,61 +12,67 @@
       <div class="jumbotron">
         <h1>Golden Corner Pie Shop</h1>
       </div><!--jumbotron-->
-      <div class="well" id="options">
-        <form>
-          <p>Choose Your Size:</p>
-          <div class="radio">
-            <label>
-              <input type="radio" name="pizzaSize" value="small" checked>
-              Small
-            </label>
-          </div><!--radio-->
-          <div class="radio">
-            <label>
-              <input type="radio" name="pizzaSize" value="medium">
-              Medium
-            </label>
-          </div><!--radio-->
-          <div class="radio">
-            <label>
-              <input type="radio" name="pizzaSize" value="large">
-              Large
-            </label>
-          </div><!--radio-->
 
-          <p>Choose Your Toppings:</p>
-          <p>Meat Options:</p>
-          <div class="radio">
-            <label>
-            <input type="radio" name="pizzaMeat" value="pepperoni" checked>
-            Pepperoni
-            </label>
-          </div><!--radio-->
-          <div class="radio">
-            <label>
-              <input type="radio" name="pizzaMeat" value="sausage">
-              Sausage
-            </label>
-          </div><!--radio-->
-          <div class="radio">
-            <label>
-              <input type="radio" name="pizzaMeat" value="vegetarian">
-              No Meat, please!
-            </label>
-          </div><!--radio-->
-
-          <p>Other Toppings:</p>
-          <p>Toppings are FREE! Add as many as you like.</p>
-          <div class="form-group">
-            <input type="checkbox" name="pizzaToppings" value="olives"> Olives<br>
-            <input type="checkbox" name="pizzaToppings" value="jalapenos"> Jalapenos<br>
-            <input type="checkbox" name="pizzaToppings" value="mushrooms"> Mushrooms<br>
-            <input type="checkbox" name="pizzaToppings" value="no-toppings"> No Toppings</br>
-          </div><!--form-group-->
-
-          <button type="submit" class="btn btn-success">Submit</button>
-        </form>
-      </div><!--well-->
+      <div class="row">
+        <div class="well" id="options">
+          <form>
+            <div class="col-md-4">
+              <p>Choose Your Size:</p>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="pizzaSize" value="small" checked>
+                  Small
+                </label>
+              </div><!--radio-->
+              <div class="radio">
+                <label>
+                  <input type="radio" name="pizzaSize" value="medium">
+                  Medium
+                </label>
+              </div><!--radio-->
+              <div class="radio">
+                <label>
+                  <input type="radio" name="pizzaSize" value="large">
+                  Large
+                </label>
+              </div><!--radio-->
+            </div><!--columnb-->
+            <div class="col-md-4">
+              <p>Choose Your Toppings:</p>
+              <p>Meat Options:</p>
+              <div class="radio">
+                <label>
+                <input type="radio" name="pizzaMeat" value="pepperoni" checked>
+                Pepperoni
+                </label>
+              </div><!--radio-->
+              <div class="radio">
+                <label>
+                  <input type="radio" name="pizzaMeat" value="sausage">
+                  Sausage
+                </label>
+              </div><!--radio-->
+              <div class="radio">
+                <label>
+                  <input type="radio" name="pizzaMeat" value="vegetarian">
+                  No Meat, please!
+                </label>
+              </div><!--radio-->
+            </div>
+            <div class="col-md-4">
+              <p>Other Toppings:</p>
+              <p>Toppings are FREE! Add as many as you like.</p>
+              <div class="form-group">
+                <input type="checkbox" name="pizzaToppings" value="olives"> Olives<br>
+                <input type="checkbox" name="pizzaToppings" value="jalapenos"> Jalapenos<br>
+                <input type="checkbox" name="pizzaToppings" value="mushrooms"> Mushrooms<br>
+                <input type="checkbox" name="pizzaToppings" value="no-toppings"> No Toppings</br>
+              </div><!--form-group-->
+          </div><!--column-->
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div><!--well-->
+      </div><!--row-->
 
       <div class="well" id="receipt">
         <p>Your Pizza Order:</p>
