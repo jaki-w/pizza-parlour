@@ -1,7 +1,7 @@
-function Pizza(size, meat,) {
+function Pizza(size, meat,toppings) {
   this.size = size;
   this.meat = meat;
-  // this.toppings = toppings;
+  this.toppings = toppings;
 }
 
 Pizza.prototype.pizzaPrice = function() {
@@ -15,9 +15,6 @@ Pizza.prototype.pizzaPrice = function() {
   } else if (this.size === "large" && this.meat === "2") {
     pizzaCost = 16;
   }
-  // for (var i=0; i< this.toppings.length; i++) {
-  //   pizzaCost += 1;
-  // }
   return pizzaCost;
 }
 
@@ -28,14 +25,8 @@ $(document).ready(function() {
     var customMeat = $("input:radio[name=pizzaMeat]:checked").val();
     var customPizzaOrder = new Pizza(customSize, customMeat);
     var finalPizzaCost = customPizzaOrder.pizzaPrice();
-    // var customToppings = [];
-    // $("input:checkbox[name=pizzaToppings]:checked").each(function() {
-    //   var checkedTopping = $(this).val();
-    //   $(customToppings).push(checkedTopping);
-    // });
 
     console.log(finalPizzaCost);
-    // console.log(customToppings);
     console.log(customSize);
     console.log(customMeat);
     console.log(customPizzaOrder);
