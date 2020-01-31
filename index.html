@@ -36,11 +36,24 @@
 
         <p>Choose Your Toppings:</p>
         <p>Meat Options:</p>
-        <div class="form-group">
-          <input type="checkbox" name="pepperoni" value="2"> Pepperoni<br>
-          <input type="checkbox" name="sausage" value="2"> Sausage<br>
-          <input type="checkbox" name="vegetarian" value="1"> No Meat, please!<br>
-        </div><!--form-group-->
+        <div class="radio">
+          <label>
+          <input type="radio" name="pizzaMeat" value="2" checked>
+          Pepperoni
+          </label>
+        </div><!--radio-->
+        <div class="radio">
+          <label>
+            <input type="radio" name="pizzaMeat" value="2" checked>
+            Sausage
+          </label>
+        </div><!--radio-->
+        <div class="radio">
+          <label>
+            <input type="radio" name="pizzaMeat" value="1">
+            No Meat, please!
+          </label>
+        </div><!--radio-->
 
         <p>Other Toppings:</p>
         <div class="form-group">
