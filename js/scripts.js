@@ -6,13 +6,13 @@ function Pizza(size, meat, toppings) {
 
 Pizza.prototype.pizzaPrice = function() {
   var pizzaCost;
-  if (this.size === "small" && this.meat === "1") {
+  if (this.size === "small" && this.meat === "vegetarian") {
     pizzaCost = 10;
-  } else if (this.size === "small" && this.meat === "2" || this.size === "medium" && this.meat === "1") {
+  } else if (this.size === "small" && this.meat === "pepperoni" || "small" && this.meat === "sausage" || this.size === "medium" && this.meat === "vegetarian") {
     pizzaCost = 12;
-  } else if (this.size === "medium" && this.meat === "2" || this.size === "large" && this.meat === "1") {
+  } else if (this.size === "medium" && this.meat === "pepperoni" || this.size === "medium" && this.meat === "sausage" || this.size === "large" && this.meat === "vegetarian") {
     pizzaCost = 14;
-  } else if (this.size === "large" && this.meat === "2") {
+  } else {
     pizzaCost = 16;
   }
   return pizzaCost;
