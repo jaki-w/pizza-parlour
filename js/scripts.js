@@ -1,10 +1,10 @@
 function Pizza(size, meat, toppings) {
   this.size = size;
   this.meat = meat;
-  this.toppings = [];
+  this.toppings = toppings;
 }
 
-Pizza.prototype.pizzaBaseCost = function(this.size, this.meat) {
+Pizza.prototype.pizzaBaseCost = function(size, meat) {
   var sizeCost = 0;
   if (this.size === small && this.meat == 1) {
     sizeCost += 10;
@@ -23,14 +23,19 @@ Pizza.prototype.toppingsCost = function(toppings) {
 }
 
 $(document).ready(function() {
-  $("button").submit(function(event) {
+  $("button").click(function(event) {
     event.preventDefault();
-    var customPizzaOrder = new Pizza(size, meat, toppings);
-    var size = $("input:radio[name=pizzaSize]:checked").val();
-    var meat = $("input:radio[name=pizzaMeat]:checked").val();
+    var customPizzaOrder = new Pizza(customSize, customMeat, customToppings);
+    var customSize = $("input:radio[name=pizzaSize]:checked").val();
+    var customMeat = $("input:radio[name=pizzaMeat]:checked").val();
+    var customToppings = [];
     $("input:checkbox[name=pizzaToppings]:checked").each(function() {
       var checkedTopping = $(this).val();
-      $(Pizza.toppings).push();
+      $(customToppings).push(checkedTopping);
     });
+    console.log(customToppings);
+    console.log(customSize);
+    console.log(customMeat);
+    console.log(customPizzaOrder);
   });
 });
