@@ -15,7 +15,7 @@ Pizza.prototype.pizzaPrice = function() {
   } else {
     pizzaCost = 16;
   }
-  return pizzaCost;
+  $("#pizzaTotal").text(pizzaCost);
 }
 
 Pizza.prototype.pizzaDetails = function(size, meat, toppings) {
