@@ -1,10 +1,10 @@
-function Pizza(size, meat, toppings) {
+function Pizza(size, meat,) {
   this.size = size;
   this.meat = meat;
-  this.toppings = toppings;
+  // this.toppings = toppings;
 }
 
-Pizza.prototype.pizzaCost = function() {
+Pizza.prototype.pizzaPrice = function() {
   var pizzaCost = 0;
   if (this.size === "small" && this.meat == 1) {
     pizzaCost += 10;
@@ -15,31 +15,26 @@ Pizza.prototype.pizzaCost = function() {
   } else if (this.size === "large" && this.meat == 2) {
     pizzaCost += 16;
   }
-  for (var i=0; i< this.toppings.length; i++) {
-    pizzaCost += 1;
-  }
+  // for (var i=0; i< this.toppings.length; i++) {
+  //   pizzaCost += 1;
+  // }
   return(pizzaCost);
-}
-
-
-Pizza.prototype.toppingsCost = function(toppings) {
-
 }
 
 $(document).ready(function() {
   $("button").click(function(event) {
     event.preventDefault();
-    var customPizzaOrder = new Pizza(customSize, customMeat, customToppings);
+    var customPizzaOrder = new Pizza(customSize, customMeat);
     var customSize = $("input:radio[name=pizzaSize]:checked").val();
     var customMeat = $("input:radio[name=pizzaMeat]:checked").val();
-    var customToppings = [];
-    $("input:checkbox[name=pizzaToppings]:checked").each(function() {
-      var checkedTopping = $(this).val();
-      $(customToppings).push(checkedTopping);
-    });
-    customPizzaOrder.pizzaCost();
-    console.log(pizzaCost);
-    console.log(customToppings);
+    // var customToppings = [];
+    // $("input:checkbox[name=pizzaToppings]:checked").each(function() {
+    //   var checkedTopping = $(this).val();
+    //   $(customToppings).push(checkedTopping);
+    // });
+    customPizzaOrder.pizzaPrice();
+    console.log(Pizza.pizzaPrice);
+    // console.log(customToppings);
     console.log(customSize);
     console.log(customMeat);
     console.log(customPizzaOrder);
