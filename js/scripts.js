@@ -32,9 +32,5 @@ $(document).ready(function() {
     var finalPizzaCost = customPizzaOrder.pizzaPrice();
 
     customPizzaOrder.pizzaDetails();
-    console.log(finalPizzaCost);
-    console.log(customSize);
-    console.log(customMeat);
-    console.log(customPizzaOrder);
   });
 });

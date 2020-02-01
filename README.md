@@ -9,8 +9,15 @@
 _A wepage where a user can create a mock pizza order. The user is able to choose pizza size and toppings and will receive a total for their order._
 
 ## Specs
+| Behavior                                                                             |               Input               |                  Output |
+|--------------------------------------------------------------------------------------|:---------------------------------:|------------------------:|
+| User chooses size from radio box options and  the choice is collected on submit      |       user clicks large size      |   "large" is collected  |
+| User chooses meat option from radio box option and the choice is collected on submit |   user clicks pepperoni  option   | "pepperoni is collected |
+| User chooses other options from drop down list                                       |      user chooses "mushrooms"     |    Checkbox is marked   |
+| Size and meat choices are displayed to user on  submit                               | user chooses large and  pepperoni |    -large -pepperoni    |
+| Pizza price is determined based on user choices  from meat and size options          | user chooses large and  pepperoni | $14                     |
 
-                                            
+
 ## Setup/ Installation Requirement
 
 * _Open web browser of choice and navigate to Github website._
@@ -29,4 +36,5 @@ _HTML, CSS, Bootstrap V3.3.7,jQuery V3.4.1_
 
 ## Legal
 
-_This project is licensed under the MIT license.
+_Copyright(c) 2020 Jaki Widby
+_This webpage is licensed under the MIT license.
