@@ -19,8 +19,9 @@ Pizza.prototype.pizzaPrice = function() {
 }
 
 Pizza.prototype.pizzaDetails = function(size, meat, toppings) {
-  $("#pizzaDetails").append("<li>" + this.size +"</li>");
-  $("#pizzaDetails").append("<li>" + this.meat +"</li>");
+  $("#pizzaDetails").empty();
+  $("#pizzaDetails").append("<li>Size: " + this.size + "</li>");
+  $("#pizzaDetails").append("<li>Meat: " + this.meat + "</li>" + "<br> Toppings:");
   $("input:checkbox[name=pizzaToppings]:checked").each(function() {
     $("#pizzaDetails").append("<li>" + ($(this).val()) + "</li>");
   })
