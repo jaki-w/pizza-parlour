@@ -16,7 +16,11 @@ Pizza.prototype.pizzaPrice = function() {
     pizzaCost = 16;
   }
   $("#pizzaTotal").text(pizzaCost);
+  finalPizzaPrice.push(pizzaCost);
+  console.log(finalPizzaPrice);
 }
+  var finalPizzaPrice = [];
+
 
 Pizza.prototype.pizzaDetails = function(size, meat, toppings) {
   $("#pizzaDetails").empty();
